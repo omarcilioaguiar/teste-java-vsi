@@ -1,0 +1,24 @@
+<h1>Exemplo Angular Básico</h1>
+
+<p>Demonstração de Data Binding Simples</p>
+
+<p>Mensagem do Componente: <strong>{{ mensagem }}</strong></p>
+
+<label for="input-exemplo">Input (Property Binding):</label>
+<input id="input-exemplo" type="text" [value]="mensagemInicial">
+
+<hr>
+
+<label for="input-evento">Digite algo para ver no console:</label>
+<input id="input-evento" type="text" #inputEvento (input)="onInputDigitado(inputEvento.value)">
+<p><em>(Abra o console do navegador para ver a saída do evento)</em></p>
+
+<hr>
+
+<label for="input-two-way">Input (Two-way Binding - ngModel):</label>
+<input id="input-two-way" type="text" [(ngModel)]="textoTwoWay">
+<p>Valor da propriedade 'textoTwoWay': <strong>{{ textoTwoWay }}</strong></p>
+
+<hr>
+
+<p><em>(Exemplo de comunicação com componente filho seria com @Input/@Output - não implementado aqui para manter a simplicidade)</em></p>
